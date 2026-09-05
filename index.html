@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Osmar Vilchez — Full-Stack Developer</title>
-<meta name="description" content="Osmar Vilchez Aguirre — Full-stack developer and CS undergrad at UTEC, Lima. Next.js, FastAPI, Spring Boot, C++." />
+<title>Osmar Vilchez — hago apps</title>
+<meta name="description" content="Osmar Vilchez — CS student at UTEC, Lima. I build things and ship them. Next.js, FastAPI, Spring Boot, C++." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -106,6 +106,8 @@
   footer .wrap{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between}
   .quote{font-family:var(--mono);font-size:.8rem;color:var(--muted);opacity:.75}
 
+  code{font-family:var(--mono);font-size:.9em;color:var(--c);
+    background:var(--bg-soft);border:1px solid var(--line);border-radius:.3rem;padding:.1rem .35rem}
   [data-lang]{display:none}
   html[data-active="en"] [data-lang="en"],
   html[data-active="es"] [data-lang="es"]{display:revert}
@@ -117,9 +119,9 @@
   <div class="wrap">
     <a class="brand" href="#top">osmar<span>.dev</span></a>
     <div class="navlinks">
-      <a href="#stack" data-hide><span data-lang="en">Stack</span><span data-lang="es">Stack</span></a>
-      <a href="#work"><span data-lang="en">Work</span><span data-lang="es">Proyectos</span></a>
-      <a href="https://github.com/Osomar1705">GitHub</a>
+      <a href="#stack" data-hide><span data-lang="en">stack</span><span data-lang="es">stack</span></a>
+      <a href="#work"><span data-lang="en">stuff</span><span data-lang="es">proyectos</span></a>
+      <a href="https://github.com/Osomar1705">github</a>
       <button class="langbtn" id="lang" type="button" aria-label="Switch language">ES</button>
     </div>
   </div>
@@ -128,49 +130,47 @@
 <header id="top">
   <div class="wrap">
     <div class="tag"><span class="dot"></span>
-      <span data-lang="en">Open to internships &amp; collabs</span>
-      <span data-lang="es">Disponible para prácticas y colaboraciones</span>
+      <span data-lang="en">looking for internships 👀</span>
+      <span data-lang="es">buscando prácticas 👀</span>
     </div>
     <h1>
-      <span data-lang="en">I build products<br>from <em>idea to deploy</em>.</span>
-      <span data-lang="es">Construyo productos<br>de la <em>idea al deploy</em>.</span>
+      <span data-lang="en">hey, I'm Osmar.<br>I <em>build things</em><br>and ship them.</span>
+      <span data-lang="es">hola, soy Osmar.<br>armo cosas y las<br><em>pongo en internet</em>.</span>
     </h1>
     <p class="lede">
-      <span data-lang="en"><strong>Osmar Vilchez Aguirre</strong> — Computer Science undergrad at UTEC, Lima 🇵🇪. I write typed React and Next.js front-ends, clean-architecture APIs in FastAPI and Spring Boot, and low-level C++ when the data structures have to be fast.</span>
-      <span data-lang="es"><strong>Osmar Vilchez Aguirre</strong> — estudiante de Ciencia de la Computación en UTEC, Lima 🇵🇪. Escribo front-ends tipados en React y Next.js, APIs con arquitectura limpia en FastAPI y Spring Boot, y C++ de bajo nivel cuando las estructuras de datos tienen que volar.</span>
+      <span data-lang="en">CS student at UTEC, Lima 🇵🇪. I like building the whole thing — front-end, API, database, deploy. If it never leaves <code>localhost:3000</code>, I don't count it as done.</span>
+      <span data-lang="es">Estudio Ciencia de la Computación en UTEC, Lima 🇵🇪. Me gusta armar cosas completas — el front, la API, la base de datos y el deploy. Si se queda en <code>localhost:3000</code>, para mí no terminó.</span>
     </p>
     <div class="cta">
       <a class="btn primary" href="#work">
-        <span data-lang="en">See my work →</span><span data-lang="es">Ver proyectos →</span>
+        <span data-lang="en">see what I've built →</span><span data-lang="es">ver lo que he hecho →</span>
       </a>
-      <a class="btn ghost" href="https://github.com/Osomar1705">GitHub</a>
+      <a class="btn ghost" href="https://github.com/Osomar1705">github</a>
     </div>
   </div>
 </header>
 
 <section id="stack">
   <div class="wrap">
-    <h2><span data-lang="en">Stack</span><span data-lang="es">Tecnologías</span></h2>
+    <h2><span data-lang="en">what I work with</span><span data-lang="es">con qué trabajo</span></h2>
     <p class="sub">
-      <span data-lang="en">What I reach for, grouped by where it lives.</span>
-      <span data-lang="es">Lo que uso, agrupado por dónde vive.</span>
+      <span data-lang="en">The top row is most days. The bottom row is when the project asks for it.</span>
+      <span data-lang="es">La primera fila es casi todos los días. La segunda, cuando el proyecto lo pide.</span>
     </p>
     <div class="stackgrid">
-      <div class="stackcard"><h3>Languages</h3><div class="chips">
-        <span class="chip">TypeScript</span><span class="chip">Python</span><span class="chip">Java</span>
-        <span class="chip">C++</span><span class="chip">JavaScript</span><span class="chip">SQL</span>
+      <div class="stackcard"><h3><span data-lang="en">every day</span><span data-lang="es">el día a día</span></h3><div class="chips">
+        <span class="chip">TypeScript</span><span class="chip">Python</span><span class="chip">Next.js</span>
+        <span class="chip">React</span><span class="chip">FastAPI</span><span class="chip">Tailwind</span>
+        <span class="chip">PostgreSQL</span><span class="chip">Docker</span>
       </div></div>
-      <div class="stackcard"><h3>Front-end</h3><div class="chips">
-        <span class="chip">Next.js 16</span><span class="chip">React 19</span><span class="chip">Tailwind v4</span>
-        <span class="chip">shadcn/ui</span><span class="chip">TanStack Query</span><span class="chip">Zustand</span><span class="chip">Vite</span>
+      <div class="stackcard"><h3><span data-lang="en">when it's needed</span><span data-lang="es">cuando toca</span></h3><div class="chips">
+        <span class="chip">Java</span><span class="chip">Spring Boot</span><span class="chip">C++</span>
+        <span class="chip">Node / Express</span><span class="chip">Redis</span><span class="chip">AWS</span>
+        <span class="chip">Vercel</span><span class="chip">GitHub Actions</span>
       </div></div>
-      <div class="stackcard"><h3>Back-end</h3><div class="chips">
-        <span class="chip">FastAPI</span><span class="chip">Spring Boot</span><span class="chip">Node / Express</span>
-        <span class="chip">SQLAlchemy 2.0</span><span class="chip">PostgreSQL</span><span class="chip">Redis</span><span class="chip">JWT + Argon2</span>
-      </div></div>
-      <div class="stackcard"><h3>Infra &amp; tooling</h3><div class="chips">
-        <span class="chip">Docker</span><span class="chip">AWS CloudFormation</span><span class="chip">Vercel</span>
-        <span class="chip">Render</span><span class="chip">GitHub Actions</span><span class="chip">CMake</span><span class="chip">Git</span>
+      <div class="stackcard"><h3><span data-lang="en">learning next</span><span data-lang="es">lo que sigue</span></h3><div class="chips">
+        <span class="chip">System design</span><span class="chip">Distributed systems</span>
+        <span class="chip">AWS (en serio)</span><span class="chip">no sobre-ingenierizar</span>
       </div></div>
     </div>
   </div>
@@ -178,10 +178,10 @@
 
 <section id="work">
   <div class="wrap">
-    <h2><span data-lang="en">Selected work</span><span data-lang="es">Proyectos destacados</span></h2>
+    <h2><span data-lang="en">stuff I've built</span><span data-lang="es">en lo que ando</span></h2>
     <p class="sub">
-      <span data-lang="en">Six projects that show the range — product, API design, live data and algorithms.</span>
-      <span data-lang="es">Seis proyectos que muestran el rango — producto, diseño de APIs, datos en vivo y algoritmos.</span>
+      <span data-lang="en">Six that I'd actually show someone. The rest live on GitHub.</span>
+      <span data-lang="es">Seis que sí mostraría. El resto vive en GitHub.</span>
     </p>
     <div class="projects">
 
@@ -189,62 +189,81 @@
         <span class="arrow">↗</span><div class="emo">🎓</div>
         <h3>TEDUCA</h3>
         <p>
-          <span data-lang="en">An EdTech marketplace connecting students with teachers: swipe discovery, courses, bookings, gamified achievements and a community wall. Modular-monolith backend with Clean Architecture and 35+ front-end routes.</span>
-          <span data-lang="es">Marketplace EdTech que conecta estudiantes con profesores: descubrimiento tipo swipe, cursos, reservas, logros gamificados y muro comunitario. Backend monolito modular con Clean Architecture y más de 35 rutas en el front.</span>
+          <span data-lang="en">Find a teacher by <strong>swiping</strong>. Yes, like Tinder, but you learn something. Courses, bookings, achievements, a community wall and a full dashboard for teachers. My biggest project and the one that taught me the most.</span>
+          <span data-lang="es">Encuentra profe <strong>haciendo swipe</strong>. Sí, como Tinder, pero para aprender algo. Cursos, reservas, logros, muro de comunidad y un panel completo para el profe. Mi proyecto más grande y el que más me ha enseñado.</span>
         </p>
-        <div class="chips"><span class="chip">Next.js 16</span><span class="chip">FastAPI</span><span class="chip">PostgreSQL</span><span class="chip">Redis</span><span class="chip">Docker</span></div>
+        <div class="chips"><span class="chip">Next.js 16</span><span class="chip">FastAPI</span><span class="chip">PostgreSQL</span><span class="chip">Redis</span></div>
       </a>
 
       <a class="proj" href="https://github.com/Osomar1705/ti-2026-platform">
         <span class="arrow">↗</span><div class="emo">🏆</div>
-        <h3>TI 2026 Platform</h3>
+        <h3>TI 2026</h3>
         <p>
-          <span data-lang="en">An esports companion pulling live match data from the STRATZ API, with a mock provider so it demos any day: bracket, win-probability charts, predictions, leaderboard and a full tournament simulator.</span>
-          <span data-lang="es">Plataforma de esports que consume datos en vivo de la API de STRATZ, con proveedor mock para demostrarla cualquier día: bracket, gráficos de probabilidad de victoria, predicciones, leaderboard y simulador de torneo.</span>
+          <span data-lang="en">Follow a <strong>Dota 2</strong> tournament live: bracket, win probability, predictions, ranking. It pulls real data from the STRATZ API, and falls back to mock data when there's no tournament — so it demos any day of the year.</span>
+          <span data-lang="es">Sigue un torneo de <strong>Dota 2</strong> en vivo: bracket, probabilidad de victoria, predicciones y ranking. Jala datos reales de la API de STRATZ y cae a datos mock cuando no hay torneo, así se puede mostrar cualquier día del año.</span>
         </p>
-        <div class="chips"><span class="chip">Next.js 16</span><span class="chip">React 19</span><span class="chip">Recharts</span><span class="chip">Framer Motion</span></div>
+        <div class="chips"><span class="chip">Next.js 16</span><span class="chip">React 19</span><span class="chip">Recharts</span></div>
+      </a>
+
+      <a class="proj" href="https://github.com/Osomar1705/Proyecto_Progra3">
+        <span class="arrow">↗</span><div class="emo">🎬</div>
+        <h3><span data-lang="en">Movie search</span><span data-lang="es">Buscador de pelis</span></h3>
+        <p>
+          <span data-lang="en"><strong>34,886 movies</strong> and a C++ engine that finds any of them instantly. Inverted index, suffix Trie, my own ranking. No magic libraries — all by hand. Hardest thing I've written.</span>
+          <span data-lang="es"><strong>34,886 películas</strong> y un buscador en C++ que las encuentra al instante. Índice invertido, Trie de sufijos y ranking propio. Sin librerías mágicas: todo a mano. Lo más difícil que he escrito.</span>
+        </p>
+        <div class="chips"><span class="chip">C++17</span><span class="chip">CMake</span><span class="chip">Patrones</span></div>
       </a>
 
       <a class="proj" href="https://github.com/Osomar1705/Stem-Link-App-v1">
         <span class="arrow">↗</span><div class="emo">🔗</div>
         <h3>STEM Link</h3>
         <p>
-          <span data-lang="en">A mentorship platform matching students with STEM mentors — profiles, availability blocks, bookings, session feedback and event-driven notifications. Deployed API with a React client.</span>
-          <span data-lang="es">Plataforma de mentoría que conecta estudiantes con mentores STEM — perfiles, bloques de disponibilidad, reservas, feedback de sesión y notificaciones por eventos. API desplegada con cliente en React.</span>
+          <span data-lang="en">Connects students with STEM mentors — profiles, schedules, bookings, notifications. Built with a team, backend in Spring Boot, and <strong>actually deployed and running</strong>.</span>
+          <span data-lang="es">Conecta estudiantes con mentores STEM — perfiles, horarios, reservas y notificaciones. Hecho en equipo, backend en Spring Boot y <strong>desplegado y funcionando</strong>.</span>
         </p>
-        <div class="chips"><span class="chip">Spring Boot</span><span class="chip">JWT</span><span class="chip">PostgreSQL</span><span class="chip">Docker</span></div>
-      </a>
-
-      <a class="proj" href="https://github.com/Osomar1705/Proyecto_Progra3">
-        <span class="arrow">↗</span><div class="emo">🎬</div>
-        <h3><span data-lang="en">Movie Search Engine</span><span data-lang="es">Buscador de películas</span></h3>
-        <p>
-          <span data-lang="en">A C++ search engine over 34,886 movies: inverted index plus a suffix Trie, a custom ranking algorithm, tag search and Observer-based recommendations — with parallel CSV loading.</span>
-          <span data-lang="es">Motor de búsqueda en C++ sobre 34 886 películas: índice invertido más Trie de sufijos, algoritmo de ranking propio, búsqueda por tags y recomendaciones con patrón Observer — con carga paralela del CSV.</span>
-        </p>
-        <div class="chips"><span class="chip">C++17</span><span class="chip">CMake</span><span class="chip">Design Patterns</span></div>
+        <div class="chips"><span class="chip">Spring Boot</span><span class="chip">JWT</span><span class="chip">PostgreSQL</span></div>
       </a>
 
       <a class="proj" href="https://github.com/Osomar1705/fly-away-travel">
         <span class="arrow">↗</span><div class="emo">✈️</div>
         <h3>Fly Away</h3>
         <p>
-          <span data-lang="en">A flight booking REST API in layered Spring Boot — stateless JWT, DTO boundaries so the JPA model can evolve freely, and a single global exception handler. Ships with a React client.</span>
-          <span data-lang="es">API REST de reservas de vuelos en Spring Boot por capas — JWT sin estado, frontera de DTOs para que el modelo JPA evolucione libre, y un único manejador global de excepciones. Incluye cliente en React.</span>
+          <span data-lang="en">Flight booking: search, pick, book. Clean layered API with JWT auth, plus a React client on the side.</span>
+          <span data-lang="es">Reserva de vuelos: buscas, eliges, reservas. API en capas con autenticación JWT, y un cliente en React al costado.</span>
         </p>
         <div class="chips"><span class="chip">Spring Boot</span><span class="chip">JWT</span><span class="chip">JPA</span></div>
       </a>
 
       <a class="proj" href="https://github.com/Osomar1705/e2e">
         <span class="arrow">↗</span><div class="emo">🚗</div>
-        <h3><span data-lang="en">Ride-Hailing Client</span><span data-lang="es">Cliente de viajes</span></h3>
+        <h3><span data-lang="en">Uber clone</span><span data-lang="es">Clon de Uber</span></h3>
         <p>
-          <span data-lang="en">An Uber-style front-end with separate driver and passenger dashboards, trip request flow, live status badges and full trip history.</span>
-          <span data-lang="es">Front-end estilo Uber con dashboards separados para conductor y pasajero, flujo de solicitud de viaje, badges de estado en vivo e historial completo.</span>
+          <span data-lang="en">Separate dashboards for driver and passenger, with the whole trip lifecycle — request, accept, track, finish.</span>
+          <span data-lang="es">Dashboards separados para conductor y pasajero, con el ciclo del viaje completo — solicitar, aceptar, seguir, terminar.</span>
         </p>
         <div class="chips"><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">Vite</span></div>
       </a>
 
+    </div>
+
+    <p class="sub" style="margin-top:2rem;margin-bottom:0">
+      <a href="https://github.com/Osomar1705?tab=repositories" style="color:var(--c);text-decoration:none;font-weight:600">
+        <span data-lang="en">→ the rest is on GitHub</span><span data-lang="es">→ el resto está en GitHub</span>
+      </a>
+    </p>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2><span data-lang="en">say hi</span><span data-lang="es">escríbeme</span></h2>
+    <p class="sub" style="max-width:38rem">
+      <span data-lang="en">Got an internship, a weird project, or just want to talk about code? I'm around.</span>
+      <span data-lang="es">¿Tienes prácticas, un proyecto raro, o solo quieres hablar de código? Por acá ando.</span>
+    </p>
+    <div class="cta">
+      <a class="btn primary" href="https://github.com/Osomar1705">github.com/Osomar1705</a>
     </div>
   </div>
 </section>
@@ -277,5 +296,6 @@
     document.getElementById('yr').textContent = new Date().getFullYear();
   })();
 </script>
+
 </body>
 </html>
