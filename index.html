@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Osmar Vilchez — Full-Stack Developer</title>
+<meta name="description" content="Osmar Vilchez Aguirre — Full-stack developer and CS undergrad at UTEC, Lima. Next.js, FastAPI, Spring Boot, C++." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --bg:#07070b; --bg-soft:#0e0e18; --card:#12121f; --line:#22223a;
+    --fg:#f4f4f8; --muted:#a0a0b8;
+    --a:#6D28D9; --b:#2563EB; --c:#06B6D4;
+    --mono:'JetBrains Mono',ui-monospace,monospace;
+  }
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg); color:var(--fg);
+    font-family:'Inter',system-ui,-apple-system,sans-serif;
+    line-height:1.65; -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  body::before{
+    content:''; position:fixed; inset:0; z-index:-1; pointer-events:none;
+    background:
+      radial-gradient(50rem 30rem at 15% -5%, rgba(109,40,217,.28), transparent 60%),
+      radial-gradient(45rem 28rem at 95% 10%, rgba(37,99,235,.22), transparent 60%),
+      radial-gradient(40rem 25rem at 50% 105%, rgba(6,182,212,.16), transparent 60%);
+  }
+  .wrap{max-width:68rem;margin-inline:auto;padding-inline:1.5rem}
+  a{color:inherit}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);
+      background:rgba(7,7,11,.72);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;
+            height:4rem}
+  .brand{font-family:var(--mono);font-weight:600;font-size:.95rem;letter-spacing:-.02em;
+         text-decoration:none;white-space:nowrap}
+  .brand span{background:linear-gradient(90deg,var(--b),var(--c));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .navlinks{display:flex;align-items:center;gap:1.5rem;font-size:.875rem}
+  .navlinks a{color:var(--muted);text-decoration:none;transition:color .2s}
+  .navlinks a:hover{color:var(--fg)}
+  @media(max-width:640px){.navlinks a[data-hide]{display:none}}
+  .langbtn{font-family:var(--mono);font-size:.75rem;font-weight:600;cursor:pointer;
+    background:var(--card);color:var(--fg);border:1px solid var(--line);
+    border-radius:999px;padding:.35rem .7rem;transition:border-color .2s,color .2s}
+  .langbtn:hover{border-color:var(--b)}
+
+  /* hero */
+  header{padding:5.5rem 0 4rem}
+  .tag{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--mono);
+    font-size:.75rem;color:var(--c);border:1px solid var(--line);background:var(--bg-soft);
+    border-radius:999px;padding:.35rem .85rem;margin-bottom:1.5rem}
+  .dot{width:.45rem;height:.45rem;border-radius:50%;background:var(--c);
+    box-shadow:0 0 0 0 rgba(6,182,212,.7);animation:pulse 2.4s infinite}
+  @keyframes pulse{70%{box-shadow:0 0 0 .5rem rgba(6,182,212,0)}100%{box-shadow:0 0 0 0 rgba(6,182,212,0)}}
+  h1{font-size:clamp(2.4rem,7vw,4.25rem);font-weight:800;line-height:1.05;
+     letter-spacing:-.035em;margin-bottom:1.25rem}
+  h1 em{font-style:normal;background:linear-gradient(100deg,var(--a),var(--b) 45%,var(--c));
+    -webkit-background-clip:text;background-clip:text;color:transparent}
+  .lede{font-size:clamp(1.02rem,2.2vw,1.2rem);color:var(--muted);max-width:44rem}
+  .cta{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2.25rem}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;
+    font-size:.9rem;font-weight:600;border-radius:.65rem;padding:.7rem 1.25rem;
+    border:1px solid var(--line);transition:transform .18s,border-color .18s,background .18s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.primary{background:linear-gradient(100deg,var(--a),var(--b));border-color:transparent}
+  .btn.ghost{background:var(--card)}
+  .btn.ghost:hover{border-color:var(--b)}
+
+  /* sections */
+  section{padding:4rem 0;border-top:1px solid var(--line)}
+  h2{font-size:1.6rem;font-weight:700;letter-spacing:-.02em;margin-bottom:.4rem}
+  .sub{color:var(--muted);font-size:.95rem;margin-bottom:2rem}
+
+  /* stack */
+  .stackgrid{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+  .stackcard{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.25rem}
+  .stackcard h3{font-family:var(--mono);font-size:.75rem;text-transform:uppercase;
+    letter-spacing:.1em;color:var(--c);margin-bottom:.9rem;font-weight:600}
+  .chips{display:flex;flex-wrap:wrap;gap:.4rem}
+  .chip{font-size:.78rem;font-family:var(--mono);color:var(--muted);
+    background:var(--bg-soft);border:1px solid var(--line);border-radius:.4rem;padding:.22rem .55rem}
+
+  /* projects */
+  .projects{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(19rem,1fr))}
+  .proj{position:relative;display:flex;flex-direction:column;background:var(--card);
+    border:1px solid var(--line);border-radius:.9rem;padding:1.4rem;text-decoration:none;
+    transition:transform .2s,border-color .2s}
+  .proj:hover{transform:translateY(-4px);border-color:var(--b)}
+  .proj .emo{font-size:1.5rem;margin-bottom:.6rem}
+  .proj h3{font-size:1.05rem;font-weight:700;margin-bottom:.45rem;letter-spacing:-.01em}
+  .proj p{font-size:.88rem;color:var(--muted);flex:1;margin-bottom:.9rem}
+  .proj .chips{margin-top:auto}
+  .arrow{position:absolute;top:1.3rem;right:1.3rem;color:var(--muted);
+    font-size:.9rem;transition:transform .2s,color .2s}
+  .proj:hover .arrow{transform:translate(2px,-2px);color:var(--c)}
+
+  /* footer */
+  footer{border-top:1px solid var(--line);padding:2.5rem 0 3rem;
+    color:var(--muted);font-size:.85rem}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between}
+  .quote{font-family:var(--mono);font-size:.8rem;color:var(--muted);opacity:.75}
+
+  [data-lang]{display:none}
+  html[data-active="en"] [data-lang="en"],
+  html[data-active="es"] [data-lang="es"]{display:revert}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">osmar<span>.dev</span></a>
+    <div class="navlinks">
+      <a href="#stack" data-hide><span data-lang="en">Stack</span><span data-lang="es">Stack</span></a>
+      <a href="#work"><span data-lang="en">Work</span><span data-lang="es">Proyectos</span></a>
+      <a href="https://github.com/Osomar1705">GitHub</a>
+      <button class="langbtn" id="lang" type="button" aria-label="Switch language">ES</button>
+    </div>
+  </div>
+</nav>
+
+<header id="top">
+  <div class="wrap">
+    <div class="tag"><span class="dot"></span>
+      <span data-lang="en">Open to internships &amp; collabs</span>
+      <span data-lang="es">Disponible para prácticas y colaboraciones</span>
+    </div>
+    <h1>
+      <span data-lang="en">I build products<br>from <em>idea to deploy</em>.</span>
+      <span data-lang="es">Construyo productos<br>de la <em>idea al deploy</em>.</span>
+    </h1>
+    <p class="lede">
+      <span data-lang="en"><strong>Osmar Vilchez Aguirre</strong> — Computer Science undergrad at UTEC, Lima 🇵🇪. I write typed React and Next.js front-ends, clean-architecture APIs in FastAPI and Spring Boot, and low-level C++ when the data structures have to be fast.</span>
+      <span data-lang="es"><strong>Osmar Vilchez Aguirre</strong> — estudiante de Ciencia de la Computación en UTEC, Lima 🇵🇪. Escribo front-ends tipados en React y Next.js, APIs con arquitectura limpia en FastAPI y Spring Boot, y C++ de bajo nivel cuando las estructuras de datos tienen que volar.</span>
+    </p>
+    <div class="cta">
+      <a class="btn primary" href="#work">
+        <span data-lang="en">See my work →</span><span data-lang="es">Ver proyectos →</span>
+      </a>
+      <a class="btn ghost" href="https://github.com/Osomar1705">GitHub</a>
+    </div>
+  </div>
+</header>
+
+<section id="stack">
+  <div class="wrap">
+    <h2><span data-lang="en">Stack</span><span data-lang="es">Tecnologías</span></h2>
+    <p class="sub">
+      <span data-lang="en">What I reach for, grouped by where it lives.</span>
+      <span data-lang="es">Lo que uso, agrupado por dónde vive.</span>
+    </p>
+    <div class="stackgrid">
+      <div class="stackcard"><h3>Languages</h3><div class="chips">
+        <span class="chip">TypeScript</span><span class="chip">Python</span><span class="chip">Java</span>
+        <span class="chip">C++</span><span class="chip">JavaScript</span><span class="chip">SQL</span>
+      </div></div>
+      <div class="stackcard"><h3>Front-end</h3><div class="chips">
+        <span class="chip">Next.js 16</span><span class="chip">React 19</span><span class="chip">Tailwind v4</span>
+        <span class="chip">shadcn/ui</span><span class="chip">TanStack Query</span><span class="chip">Zustand</span><span class="chip">Vite</span>
+      </div></div>
+      <div class="stackcard"><h3>Back-end</h3><div class="chips">
+        <span class="chip">FastAPI</span><span class="chip">Spring Boot</span><span class="chip">Node / Express</span>
+        <span class="chip">SQLAlchemy 2.0</span><span class="chip">PostgreSQL</span><span class="chip">Redis</span><span class="chip">JWT + Argon2</span>
+      </div></div>
+      <div class="stackcard"><h3>Infra &amp; tooling</h3><div class="chips">
+        <span class="chip">Docker</span><span class="chip">AWS CloudFormation</span><span class="chip">Vercel</span>
+        <span class="chip">Render</span><span class="chip">GitHub Actions</span><span class="chip">CMake</span><span class="chip">Git</span>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <h2><span data-lang="en">Selected work</span><span data-lang="es">Proyectos destacados</span></h2>
+    <p class="sub">
+      <span data-lang="en">Six projects that show the range — product, API design, live data and algorithms.</span>
+      <span data-lang="es">Seis proyectos que muestran el rango — producto, diseño de APIs, datos en vivo y algoritmos.</span>
+    </p>
+    <div class="projects">
+
+      <a class="proj" href="https://github.com/Osomar1705/Teduca">
+        <span class="arrow">↗</span><div class="emo">🎓</div>
+        <h3>TEDUCA</h3>
+        <p>
+          <span data-lang="en">An EdTech marketplace connecting students with teachers: swipe discovery, courses, bookings, gamified achievements and a community wall. Modular-monolith backend with Clean Architecture and 35+ front-end routes.</span>
+          <span data-lang="es">Marketplace EdTech que conecta estudiantes con profesores: descubrimiento tipo swipe, cursos, reservas, logros gamificados y muro comunitario. Backend monolito modular con Clean Architecture y más de 35 rutas en el front.</span>
+        </p>
+        <div class="chips"><span class="chip">Next.js 16</span><span class="chip">FastAPI</span><span class="chip">PostgreSQL</span><span class="chip">Redis</span><span class="chip">Docker</span></div>
+      </a>
+
+      <a class="proj" href="https://github.com/Osomar1705/ti-2026-platform">
+        <span class="arrow">↗</span><div class="emo">🏆</div>
+        <h3>TI 2026 Platform</h3>
+        <p>
+          <span data-lang="en">An esports companion pulling live match data from the STRATZ API, with a mock provider so it demos any day: bracket, win-probability charts, predictions, leaderboard and a full tournament simulator.</span>
+          <span data-lang="es">Plataforma de esports que consume datos en vivo de la API de STRATZ, con proveedor mock para demostrarla cualquier día: bracket, gráficos de probabilidad de victoria, predicciones, leaderboard y simulador de torneo.</span>
+        </p>
+        <div class="chips"><span class="chip">Next.js 16</span><span class="chip">React 19</span><span class="chip">Recharts</span><span class="chip">Framer Motion</span></div>
+      </a>
+
+      <a class="proj" href="https://github.com/Osomar1705/Stem-Link-App-v1">
+        <span class="arrow">↗</span><div class="emo">🔗</div>
+        <h3>STEM Link</h3>
+        <p>
+          <span data-lang="en">A mentorship platform matching students with STEM mentors — profiles, availability blocks, bookings, session feedback and event-driven notifications. Deployed API with a React client.</span>
+          <span data-lang="es">Plataforma de mentoría que conecta estudiantes con mentores STEM — perfiles, bloques de disponibilidad, reservas, feedback de sesión y notificaciones por eventos. API desplegada con cliente en React.</span>
+        </p>
+        <div class="chips"><span class="chip">Spring Boot</span><span class="chip">JWT</span><span class="chip">PostgreSQL</span><span class="chip">Docker</span></div>
+      </a>
+
+      <a class="proj" href="https://github.com/Osomar1705/Proyecto_Progra3">
+        <span class="arrow">↗</span><div class="emo">🎬</div>
+        <h3><span data-lang="en">Movie Search Engine</span><span data-lang="es">Buscador de películas</span></h3>
+        <p>
+          <span data-lang="en">A C++ search engine over 34,886 movies: inverted index plus a suffix Trie, a custom ranking algorithm, tag search and Observer-based recommendations — with parallel CSV loading.</span>
+          <span data-lang="es">Motor de búsqueda en C++ sobre 34 886 películas: índice invertido más Trie de sufijos, algoritmo de ranking propio, búsqueda por tags y recomendaciones con patrón Observer — con carga paralela del CSV.</span>
+        </p>
+        <div class="chips"><span class="chip">C++17</span><span class="chip">CMake</span><span class="chip">Design Patterns</span></div>
+      </a>
+
+      <a class="proj" href="https://github.com/Osomar1705/fly-away-travel">
+        <span class="arrow">↗</span><div class="emo">✈️</div>
+        <h3>Fly Away</h3>
+        <p>
+          <span data-lang="en">A flight booking REST API in layered Spring Boot — stateless JWT, DTO boundaries so the JPA model can evolve freely, and a single global exception handler. Ships with a React client.</span>
+          <span data-lang="es">API REST de reservas de vuelos en Spring Boot por capas — JWT sin estado, frontera de DTOs para que el modelo JPA evolucione libre, y un único manejador global de excepciones. Incluye cliente en React.</span>
+        </p>
+        <div class="chips"><span class="chip">Spring Boot</span><span class="chip">JWT</span><span class="chip">JPA</span></div>
+      </a>
+
+      <a class="proj" href="https://github.com/Osomar1705/e2e">
+        <span class="arrow">↗</span><div class="emo">🚗</div>
+        <h3><span data-lang="en">Ride-Hailing Client</span><span data-lang="es">Cliente de viajes</span></h3>
+        <p>
+          <span data-lang="en">An Uber-style front-end with separate driver and passenger dashboards, trip request flow, live status badges and full trip history.</span>
+          <span data-lang="es">Front-end estilo Uber con dashboards separados para conductor y pasajero, flujo de solicitud de viaje, badges de estado en vivo e historial completo.</span>
+        </p>
+        <div class="chips"><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">Vite</span></div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> Osmar Vilchez Aguirre · Lima, Perú</span>
+    <span class="quote">« el código que no se despliega es solo un archivo de texto »</span>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var html = document.documentElement;
+    var btn = document.getElementById('lang');
+    var saved;
+    try { saved = localStorage.getItem('lang'); } catch (e) {}
+    var initial = saved || ((navigator.language || 'en').toLowerCase().indexOf('es') === 0 ? 'es' : 'en');
+    set(initial);
+
+    function set(l) {
+      html.setAttribute('data-active', l);
+      html.setAttribute('lang', l);
+      btn.textContent = l === 'en' ? 'ES' : 'EN';
+      try { localStorage.setItem('lang', l); } catch (e) {}
+    }
+    btn.addEventListener('click', function () {
+      set(html.getAttribute('data-active') === 'en' ? 'es' : 'en');
+    });
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  })();
+</script>
+</body>
+</html>
